@@ -1,26 +1,26 @@
-import firebase from "firebase/app";
+import firebase from "firebase/compat/app";
 import "firebase/firestore";
 
 const {
-  API_KEY,
-  AUTO_DOMAIN,
-  PROJECT_ID,
-  STORAGE_BUCKET,
-  MESSAGE_SENSOR_ID,
-  APP_ID,
-  MEASUREMENT_ID,
-} = process.env;
+  REACT_APP_API_KEY,
+  REACT_APP_AUTO_DOMAIN,
+  REACT_APP_PROJECT_ID,
+  REACT_APP_STORAGE_BUCKET,
+  REACT_APP_MESSAGE_SENSOR_ID,
+  REACT_APP_APP_ID,
+  REACT_APP_MEASUREMENT_ID,
+} = import.meta.env;
 
 const firebaseConfig = {
-  apiKey: API_KEY,
-  autoDomain: AUTO_DOMAIN,
-  projectId: PROJECT_ID,
-  storageBucket: STORAGE_BUCKET,
-  messageSensorId: MESSAGE_SENSOR_ID,
-  appId: APP_ID,
-  measurementId: MEASUREMENT_ID,
+  apiKey: REACT_APP_API_KEY,
+  autoDomain: REACT_APP_AUTO_DOMAIN,
+  projectId: REACT_APP_PROJECT_ID,
+  storageBucket: REACT_APP_STORAGE_BUCKET,
+  messageSensorId: REACT_APP_MESSAGE_SENSOR_ID,
+  appId: REACT_APP_APP_ID,
+  measurementId: REACT_APP_MEASUREMENT_ID,
 };
 
-firebase.initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
 
-export default firebase;
+export default app;
