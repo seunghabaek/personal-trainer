@@ -1,5 +1,7 @@
 import firebase from "firebase/compat/app";
-import "firebase/firestore";
+import "firebase/compat/firestore";
+import "firebase/compat/auth";
+import "firebase/compat/storage";
 
 const {
   REACT_APP_API_KEY,
@@ -21,6 +23,9 @@ const firebaseConfig = {
   measurementId: REACT_APP_MEASUREMENT_ID,
 };
 
-const app = firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-export default app;
+export const firebaseInstance = firebase;
+// export const authService = firebase.auth();
+export const dbService = firebase.firestore();
+export const storageService = firebase.storage();

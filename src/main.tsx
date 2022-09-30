@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import firebase from "./firebase";
+import { firebaseInstance } from "./firebase";
+import { Auth } from "./routes/Auth";
 
-console.log(firebase);
+// test
+console.log(firebaseInstance);
+console.log(Auth);
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <App />
