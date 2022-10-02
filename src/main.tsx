@@ -5,8 +5,8 @@ import { firebaseInstance } from "./firebase";
 import { Auth } from "./routes/Auth";
 
 // test
-console.log(firebaseInstance);
-console.log(Auth);
+// console.log(firebaseInstance);
+// console.log(Auth);
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <App />
