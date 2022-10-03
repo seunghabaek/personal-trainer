@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { AppRouter } from "./components/Router";
+import { authService } from "./fbase";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  console.log(authService);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
   return (
     <>
-      {/* <h1>personal-trainer</h1> */}
-
       <AppRouter isLoggedIn={isLoggedIn} />
+      <footer>&copy; {new Date().getFullYear()} personal-trainer</footer>
     </>
   );
 }
