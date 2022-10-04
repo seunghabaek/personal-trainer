@@ -1,6 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Auth } from "../routes/Auth";
 import { Home } from "../routes/Home";
+import { authService } from "../fbase";
+
+export interface IApplicationProps {}
 
 export const AppRouter = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
   return (
