@@ -6,7 +6,6 @@ import {
   GoogleAuthProvider,
   FacebookAuthProvider,
   signInWithPopup,
-  OAuthProvider,
 } from "firebase/auth";
 
 export const Auth = () => {
@@ -57,14 +56,13 @@ export const Auth = () => {
       provider = new GoogleAuthProvider();
     } else if (name === "facebook") {
       provider = new FacebookAuthProvider();
-    } else {
-      provider = new OAuthProvider("apple.com");
     }
     const data = await signInWithPopup(authService, provider);
-    console.log(data);
   };
+
   return (
     <div>
+      <h2>Personal-Trainer</h2>
       <form onSubmit={onSubmit}>
         <input
           name="email"
@@ -94,9 +92,6 @@ export const Auth = () => {
         </button>
         <button name="facebook" onClick={onSocialClick}>
           Continue with Facebook
-        </button>
-        <button name="apple" onClick={onSocialClick}>
-          Continue with Apple
         </button>
       </div>
     </div>
