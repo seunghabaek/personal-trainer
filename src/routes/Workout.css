@@ -1,0 +1,41 @@
+.back_pos {
+  position: absolute;
+  top: 240px;
+  left: 30px;
+}
+
+.chest_pos {
+  position: absolute;
+  top: 340px;
+  left: 30px;
+}
+
+.abs_pos {
+  position: absolute;
+  top: 400px;
+  left: 30px;
+}
+
+.legs_pos {
+  position: absolute;
+  top: 540px;
+  left: 30px;
+}
+
+.shoulder_pos {
+  position: absolute;
+  top: 240px;
+  right: 10px;
+}
+
+.triceps_pos {
+  position: absolute;
+  top: 290px;
+  right: 10px;
+}
+
+.biceps_pos {
+  position: absolute;
+  top: 340px;
+  right: 10px;
+}
