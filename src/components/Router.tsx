@@ -8,7 +8,7 @@ import { Biceps } from "./body/Biceps";
 import { Legs } from "./body/Legs";
 import { Shoulder } from "./body/Shoulder";
 import { Triceps } from "./body/Triceps";
-import { Workout } from "../routes/WorkOut";
+import { Workout } from "../routes/Workout";
 import { Status } from "../routes/Status";
 import { Management } from "../routes/Management";
 

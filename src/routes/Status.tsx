@@ -9,6 +9,11 @@ export const Status = () => {
         <h1>nickname's Status</h1>
       </div>
       <div>
+        <Button>Why</Button>
+        <Button>How</Button>
+        <Button>What</Button>
+      </div>
+      <div>
         <Data />
       </div>
       <div>

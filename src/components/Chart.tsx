@@ -7,7 +7,6 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  ResponsiveContainer,
 } from "recharts";
 import { chartData } from "./data/chartDataJson";
 
@@ -30,12 +29,14 @@ export const Data = () => {
       <Tooltip />
       <Legend />
       <Line
-        type="monotone"
-        dataKey="weight"
-        stroke="#8884d8"
-        activeDot={{ r: 8 }}
+        type="basis"
+        dataKey="targetWeight"
+        stroke="red"
+        strokeDasharray="3 3"
+        dot={{ r: 0.1 }}
+        strokeWidth={1.5}
       />
-      <Line type="monotone" dataKey="fatRatio" stroke="#82ca9d" />
+      <Line type="monotone" dataKey="weight" stroke="#82ca9d" strokeWidth={3} />
     </LineChart>
   );
 };
