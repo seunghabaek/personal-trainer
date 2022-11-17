@@ -1,5 +1,26 @@
+import { useEffect, useState } from "react";
+import { AppRouter } from "./components/Router";
+import { authService } from "./fbase";
+
 function App() {
-  return <h1>personal-trainer</h1>;
+  const [init, setInit] = useState<boolean>(false);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  useEffect(() => {
+    authService.onAuthStateChanged((user) => {
+      if (user) {
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+      }
+      setInit(true);
+    });
+  }, []);
+  return (
+    <>
+      {init ? <AppRouter isLoggedIn={isLoggedIn} /> : "Initializing..."}
+      <footer>&copy; {new Date().getFullYear()} personal-trainer</footer>
+    </>
+  );
 }
 
 export default App;
