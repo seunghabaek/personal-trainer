@@ -14,7 +14,7 @@ export const Data = () => {
   return (
     <LineChart
       width={350}
-      height={250}
+      height={400}
       data={chartData}
       margin={{
         top: 20,

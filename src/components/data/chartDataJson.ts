@@ -3,4 +3,3 @@ import { targetData } from "./targetDataJson";
 import merge from "lodash/merge";
 
 export const chartData = merge(targetData, getData);
-console.log(chartData);
