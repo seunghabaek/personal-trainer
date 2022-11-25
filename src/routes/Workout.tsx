@@ -40,7 +40,7 @@ export const Workout = () => {
             margin: "auto",
           }}
         ></img>
-        <div style={{ backgroundColor: "red" }}>
+        <div>
           <Link to="/workout/chest">
             <Button className="chest_pos">chest</Button>
           </Link>
@@ -65,12 +65,10 @@ export const Workout = () => {
         </div>
       </div>
       <div
+        className="d-flex justify-content-center"
         style={{
           position: "absolute",
-          bottom: "40px",
-          width: "35%",
-          left: "50px",
-          margin: "auto",
+          bottom: "50px",
         }}
       >
         <ButtonGroup>

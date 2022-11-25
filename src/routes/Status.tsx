@@ -1,6 +1,8 @@
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { Data } from "../components/Chart";
+import { List } from "../components/Purpose";
+import { Collapse } from "../components/Collapse";
 
 export const Status = () => {
   return (
@@ -9,14 +11,13 @@ export const Status = () => {
         <h1>nickname's Status</h1>
       </div>
       <div>
-        <Button>Why</Button>
-        <Button>How</Button>
-        <Button>What</Button>
+        {/* <List /> */}
+        <Collapse />
       </div>
       <div>
         <Data />
       </div>
-      <div>
+      <div className="border d-flex justify-content-center">
         <Link to="/management">
           <Button variant="primary" size="lg">
             Management
