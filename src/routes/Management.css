@@ -1,0 +1,11 @@
+.front {
+  position: absolute;
+  top: 120px;
+  left: 100px;
+}
+
+.back {
+  position: absolute;
+  top: 120px;
+  right: 100px;
+}

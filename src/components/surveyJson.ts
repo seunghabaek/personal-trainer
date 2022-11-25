@@ -1,7 +1,7 @@
 export const surveyJson = {
   pages: [
     {
-      title: "why do you trying to exercise?",
+      title: "why are you trying to do exercise?",
       elements: [
         {
           name: "why",
@@ -68,6 +68,19 @@ export const surveyJson = {
           type: "text",
           name: "additional info",
           title: "Additional Info",
+        },
+      ],
+    },
+    {
+      title: "Your favorite Youtube channel",
+      elements: [
+        {
+          name: "why",
+          title: "Your favorite youtube channel",
+          type: "radiogroup",
+          isRequired: false,
+          hasOther: false,
+          choices: ["피지컬갤러리", "지피티", "지기채널", "권혁TV"],
         },
       ],
     },

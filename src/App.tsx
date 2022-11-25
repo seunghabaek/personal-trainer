@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AppRouter } from "./components/Router";
 import { authService } from "./fbase";
+import "./Main.css";
 
 function App() {
   const [init, setInit] = useState<boolean>(false);
@@ -18,7 +19,9 @@ function App() {
   return (
     <>
       {init ? <AppRouter isLoggedIn={isLoggedIn} /> : "Initializing..."}
-      <footer>&copy; {new Date().getFullYear()} personal-trainer</footer>
+      <footer className="footer">
+        &copy; {new Date().getFullYear()} personal-trainer
+      </footer>
     </>
   );
 }
