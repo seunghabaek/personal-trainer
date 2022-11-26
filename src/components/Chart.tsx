@@ -10,14 +10,38 @@ import {
 } from "recharts";
 import { chartData } from "./data/chartDataJson";
 import { StatusDropdown } from "./data/status-drop-down";
+import {
+  ButtonDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap";
 
 export const Data = () => {
-  const [targetData, setTargetData] = useState<string>("weight");
-  const [dropboxItem, setDropboxItem] = useState<string>("weight");
+  const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+  const [data, setData] = useState<string>("Weight");
+
+  const weightClick = () => {
+    setData("Weight");
+  };
+  const fatRatioClick = () => {
+    setData("Fat Ratio");
+  };
+  const toggle = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
 
   return (
     <>
-      <StatusDropdown />
+      <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
+        <DropdownToggle color="warning" caret>
+          {data}
+        </DropdownToggle>
+        <DropdownMenu>
+          <DropdownItem onClick={weightClick}>Weight</DropdownItem>
+          <DropdownItem onClick={fatRatioClick}>Fat Ratio</DropdownItem>
+        </DropdownMenu>
+      </ButtonDropdown>
       <LineChart
         width={350}
         height={400}
@@ -36,7 +60,7 @@ export const Data = () => {
         <Legend />
         <Line
           type="basis"
-          dataKey="targetWeight"
+          dataKey={`${data == "Weight" ? "targetWeight" : "targetFatRatio"}`}
           stroke="red"
           strokeDasharray="3 3"
           dot={{ r: 0.1 }}
@@ -44,7 +68,7 @@ export const Data = () => {
         />
         <Line
           type="monotone"
-          dataKey="weight"
+          dataKey={`${data == "Weight" ? "weight" : "fatRatio"}`}
           stroke="#82ca9d"
           strokeWidth={3}
         />
