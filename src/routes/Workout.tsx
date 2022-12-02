@@ -50,17 +50,14 @@ export const Workout = () => {
           <Link to="/workout/abs">
             <Button className="abs_pos">abs</Button>
           </Link>
-          <Link to="/workout/biceps">
-            <Button className="biceps_pos">biceps</Button>
+          <Link to="/workout/arms">
+            <Button className="arms_pos">arms</Button>
           </Link>
           <Link to="/workout/legs">
             <Button className="legs_pos">legs</Button>
           </Link>
           <Link to="/workout/shoulder">
             <Button className="shoulder_pos">shoulder</Button>
-          </Link>
-          <Link to="/workout/triceps">
-            <Button className="triceps_pos">triceps</Button>
           </Link>
         </div>
       </div>

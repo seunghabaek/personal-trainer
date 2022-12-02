@@ -28,13 +28,7 @@
   right: 10px;
 }
 
-.triceps_pos {
-  position: absolute;
-  top: 180px;
-  right: 10px;
-}
-
-.biceps_pos {
+.arms_pos {
   position: absolute;
   top: 240px;
   right: 10px;
