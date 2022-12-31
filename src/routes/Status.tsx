@@ -7,9 +7,10 @@ import { Collapse } from "../components/Collapse";
 export const Status = () => {
   return (
     <>
-      <div>
+      {/* <Header title={"Status"} /> */}
+      {/* <div>
         <h1>nickname's Status</h1>
-      </div>
+      </div> */}
       <div>
         {/* <List /> */}
         <Collapse />

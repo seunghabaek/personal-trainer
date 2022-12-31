@@ -5,7 +5,27 @@ import Lower from "../components/photo/lower.png";
 import Button from "react-bootstrap/Button";
 import { ButtonGroup } from "react-bootstrap";
 
+import {
+  ButtonDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap";
+import { useState } from "react";
+
 export const Workout = () => {
+  const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+  const [data, setData] = useState<string>("arms");
+
+  const tricepsClick = () => {
+    setData("triceps");
+  };
+  const bicepsClick = () => {
+    setData("biceps");
+  };
+  const toggle = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
   const clickUpper = () => {
     alert("touch upper");
   };
@@ -50,9 +70,21 @@ export const Workout = () => {
           <Link to="/workout/abs">
             <Button className="abs_pos">abs</Button>
           </Link>
-          <Link to="/workout/arms">
-            <Button className="arms_pos">arms</Button>
-          </Link>
+
+          <ButtonDropdown
+            isOpen={dropdownOpen}
+            toggle={toggle}
+            className="arms_pos"
+          >
+            <DropdownToggle color="warning" caret>
+              {data}
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem onClick={tricepsClick}>triceps</DropdownItem>
+              <DropdownItem onClick={bicepsClick}>biceps</DropdownItem>
+            </DropdownMenu>
+          </ButtonDropdown>
+
           <Link to="/workout/legs">
             <Button className="legs_pos">legs</Button>
           </Link>

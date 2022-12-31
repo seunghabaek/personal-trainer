@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { AppRouter } from "./components/Router";
 import { authService } from "./fbase";
 import "./Main.css";
+import { Layout } from "./components/Layout";
 
 function App() {
   const [init, setInit] = useState<boolean>(false);
@@ -18,10 +19,11 @@ function App() {
   }, []);
   return (
     <>
-      {init ? <AppRouter isLoggedIn={isLoggedIn} /> : "Initializing..."}
-      <footer className="footer">
-        &copy; {new Date().getFullYear()} personal-trainer
-      </footer>
+      <Layout>
+        <div>
+          {init ? <AppRouter isLoggedIn={isLoggedIn} /> : "Initializing..."}
+        </div>
+      </Layout>
     </>
   );
 }

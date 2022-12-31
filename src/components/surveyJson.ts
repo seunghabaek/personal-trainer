@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 export const surveyJson = {
   pages: [
     {
@@ -85,4 +87,5 @@ export const surveyJson = {
       ],
     },
   ],
+  completedHtml: `<p><h4>Thank you for sharing this information with us.</h4></p><div><a href="/status">Main</a></div>`,
 };

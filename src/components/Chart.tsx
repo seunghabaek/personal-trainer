@@ -71,6 +71,7 @@ export const Data = () => {
           dataKey={`${data == "Weight" ? "weight" : "fatRatio"}`}
           stroke="#82ca9d"
           strokeWidth={3}
+          animateNewValues={true}
         />
       </LineChart>
     </>
